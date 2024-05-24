@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Heart Disease</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS v5.0.2 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        >
+        <link rel = "icon" href = "{{ url_for('static', filename='./picture/5.png') }}" type = "image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='./css/style.css') }}">
+    </head>
+    <body>
+        <div class="loader_bg">
+          <div class="loader"></div>
+        </div>
+        <div id="box-area">
+        <header>
+       
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+                <div class="container">
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                           
+                            </li>
+                        </ul>
+                          
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="section_div fw-bold fs-2 d-flex justify-content-center align-items-center">
+          Heart Disease Prediction
+        </section>
+        <div class=" fw-bold text-white col_name d-flex justify-content-center align-items-center">
+          Column Names:&nbsp;&nbsp;<span class="box text-danger"></span>
+        </div>
+        <main class="container">
+          <div class="container">
+            <div class="row">
+                <!-- Left column with heart image -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <img src="https://i.ibb.co/N9mhx0d/output-onlinegiftools.gif" alt="Heart Image" class="img-fluid">
+                </div>
+                <!-- Right column with form inputs -->
+                <div class="col-md-6">
+                    <form method="post" id="postform" autocomplete="off">
+                        <!-- Age -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="age" class="form-label fw-bold">Age</label>
+                                <input type="number" class="form-control" name="age" required id="age" max="100" min="1" placeholder="(1-100) Age">
+                            </div>
+                        </div>
+                        <!-- Sex -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="sex" class="form-label fw-bold">Sex</label>
+                                <input type="number" class="form-control" name="sex" required id="sex" max="1" min="0" placeholder="(0=Male or 1=Female) Sex">
+                            </div>
+                        </div>
+                        <!-- Chest Pain -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="cp" class="form-label fw-bold">Chest Pain</label>
+                                <input type="number" class="form-control" name="cp" required id="cp" max="2" min="0" placeholder="(0=ATA, 1=NAP, 2=ASY) Chest Pain">
+                            </div>
+                        </div>
+                        <!-- Resting Blood Pressure -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="bp" class="form-label fw-bold">Resting Blood Pressure</label>
+                                <input type="number" class="form-control" name="bp" required id="bp" max="200" min="90" placeholder="(90 to 200) Resting blood pressure">
+                            </div>
+                        </div>
+                        <!-- Serum Cholestoral -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="chol" class="form-label fw-bold">Serum Cholestoral</label>
+                                <input type="number" class="form-control" name="chol" required id="chol" max="500" min="100" placeholder="(100 to 500) Serum cholestoral in mg/dl">
+                            </div>
+                        </div>
+                        <!-- Fasting Blood Sugar -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="fbs" class="form-label fw-bold">Fasting Blood Sugar</label>
+                                <input type="number" class="form-control" name="fbs" required id="fbs" max="1" min="0" placeholder="(0 = No | 1 = Yes) Fasting blood sugar > 120 mg/dl">
+                            </div>
+                        </div>
+                        <!-- Resting Electrocardiographic -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="restecg" class="form-label fw-bold">Resting Electrocardiographic</label>
+                                <input type="number" class="form-control" name="restecg" required id="restecg" max="2" min="0" placeholder="(0=Normal,1=ST,2=LVH) Resting electrocardiographic results">
+                            </div>
+                        </div>
+                        <!-- Heart Rate -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="thalach" class="form-label fw-bold">Heart Rate</label>
+                                <input type="number" class="form-control" name="thalach" required id="thalach" max="200" min="70" placeholder="(70 to 200) Maximum heart rate achieved">
+                            </div>
+                        </div>
+                        <!-- Exercise Induced Angina -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="exang" class="form-label fw-bold">Exercise Induced Angina</label>
+                                <input type="number" class="form-control" name="exang" required id="exang" max="1" min="0" placeholder="(0=No,1=Yes) Exercise induced angina">
+                            </div>
+                        </div>
+                        <!-- Oldpeak -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="oldpeak" class="form-label fw-bold">Oldpeak</label>
+                                <input type="number" class="form-control" name="oldpeak" required id="oldpeak" step="0.01" max="10" min="0" placeholder="Float(0 to 10) Oldpeak">
+                            </div>
+                        </div>
+                        <!-- Slope -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="slope" class="form-label fw-bold">Slope</label>
+                                <input type="number" class="form-control" name="slope" required id="slope" max="2" min="0" placeholder="(0=Up, 1=Flat, 2=Down) The slope of the peak exercise ST segment">
+                            </div>
+                        </div>
+                        <!-- Number of Major Vessels -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="ca" class="form-label fw-bold">Number of Major Vessels</label>
+                                <input type="number" class="form-control" name="ca" required id="ca" max="3" min="0" placeholder="(0-3) Number of major vessels">
+                            </div>
+                        </div>
+                        <!-- Thal -->
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="thal" class="form-label fw-bold">Thal</label>
+                                <input type="number" class="form-control" name="thal" required id="thal" max="2" min="0" placeholder="Thal: 0 = normal; 1 = fixed defect; 2 = reversible defect">
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-outline-danger container fw-bold" data-toggle="modal" data-target="#predictionModal">SUBMIT DATA</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+        
+      </main>
+      
+        <hr>
+        <div class="fs-3 mt-3 text-decoration-underline text-center fw-bold" id="result_title">
+          PREDICTION RESULTS
+        </div>
+        <div class="text-center p-2" id="loading">
+          <img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator.gif" alt="" srcset="" style="width: 100px; height: 100px;">
+        </div>
+        <div class="fs-4 fw-bold text-center mt-2 pt-2" id="result">
+
+        </div>
+       
+      </div>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+        <script src = {{ url_for('static', filename='JS/type.js') }}></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+          var typed = new Typed('.box', {
+          strings: ['Age', 'Sex', 'Chest pain type (4 values)', 'Resting blood pressure',
+        "Serum cholestoral in mg/dl","Fasting blood sugar > 120 mg/dl","Resting electrocardiographic","Maximum heart rate achieved","Exercise induced angina","Oldpeak","The slope of the peak exercise ST segment","Number of major vessels (0-3)","Thal"],
+          typeSpeed: 40,
+          backspaceSpeed: 20,
+          backspaceDelay: 80,
+          repeatDelay: 10,
+          repeat: true,
+          autoStart: true,
+          startDelay: 10,
+          loop: true,
+        });
+        function display()
+        {
+          loading.style.display = "none";
+          result_div.style.display = "block";
+        }
+        document.getElementById("result").style.display = "none";
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("result_title").style.display = "none";
+        document.getElementById('postform').addEventListener('submit', getData);
+        function getData(e){
+                e.preventDefault();
+                age = document.getElementById("age").value;
+                sex = document.getElementById("sex").value;
+                cp = document.getElementById("cp").value;//0-3
+                bp = document.getElementById("bp").value;//90-200
+                chol = document.getElementById("chol").value;//100-500
+                fbs = document.getElementById("fbs").value;//0-1
+                restecg = document.getElementById("restecg").value;//0-2
+                thalach = document.getElementById("thalach").value;//70-200
+                exang = document.getElementById("exang").value;//0-1
+                oldpeak = document.getElementById("oldpeak").value;//0-10
+                slope = document.getElementById("slope").value;//0-2
+                ca = document.getElementById("ca").value;//0-3
+                thal = document.getElementById("thal").value;//0-2
+                var params = {Age:age, Sex:sex, Cp:cp, Bp:bp, Chol:chol, Fbs:fbs, Restecg:restecg, Thalach:thalach, Exang:exang, Oldpeak:oldpeak, Slope:slope, Ca:ca, Thal:thal};
+                var xhr = new XMLHttpRequest();
+                xhr.open('post', '../reply', true)
+                xhr.setRequestHeader('Content-type', 'application/json');
+                xhr.onload = function(){
+                  result = Number(this.responseText);
+                  result_div = document.getElementById("result");
+                  loading = document.getElementById("loading");
+                  result_title = document.getElementById("result_title");
+                  result_div.style.display = "none";
+                  loading.style.display = "block";
+                  result_title.style.display = "block";
+                  window.scrollBy(0,170);
+                  setTimeout(display, 3000);
+                  if(result == 1)
+                  {
+                    result_div.classList.remove("result_shadow_success");
+                    result_div.innerText = "Bad News! Your test is Positive [1], You face some Heart Disease";
+                    result_div.classList.add("result_shadow_danger");
+                  }
+                  else
+                  {
+                    result_div.classList.remove("result_shadow_danger");
+                    result_div.innerText = "Good News! Your test is Negative [0], You don't face any Heart Disease";
+                    result_div.classList.add("result_shadow_success");
+                  }
+                }
+                xhr.send(JSON.stringify(params));
+            }
+            setTimeout(function(){
+            $('.loader_bg').fadeToggle();
+            }, 1000);
+        </script>
+    </body>
+</html>

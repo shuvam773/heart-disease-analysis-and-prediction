@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    
+/*
+! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.static {
+  position: static;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
+.left-\[calc\(50\%-4rem\)\] {
+  left: calc(50% - 4rem);
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.aspect-\[1108\/632\] {
+  aspect-ratio: 1108/632;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-11 {
+  height: 2.75rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.max-h-12 {
+  max-height: 3rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-\[69\.25rem\] {
+  width: 69.25rem;
+}
+
+.w-\[76rem\] {
+  width: 76rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.transform-gpu {
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-x-6 {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.gap-y-10 {
+  row-gap: 2.5rem;
+}
+
+.gap-y-16 {
+  row-gap: 4rem;
+}
+
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-indigo-500\/10 {
+  background-color: rgb(99 102 241 / 0.1);
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+
+.bg-white\/5 {
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-\[\#ff0000\] {
+  --tw-gradient-from: #ff0000 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-\[\#f1f1f1\] {
+  --tw-gradient-to: #f1f1f1 var(--tw-gradient-to-position);
+}
+
+.fill-gray-800\/20 {
+  fill: rgb(31 41 55 / 0.2);
+}
+
+.stroke-white\/10 {
+  stroke: rgb(255 255 255 / 0.1);
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-3\.5 {
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2\.5 {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.leading-8 {
+  line-height: 2rem;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
+}
+
+.opacity-20 {
+  opacity: 0.2;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-inset {
+  --tw-ring-inset: inset;
+}
+
+.ring-indigo-500\/20 {
+  --tw-ring-color: rgb(99 102 241 / 0.2);
+}
+
+.ring-white\/10 {
+  --tw-ring-color: rgb(255 255 255 / 0.1);
+}
+
+.blur-3xl {
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.\[mask-image\:radial-gradient\(100\%_100\%_at_top_right\2c white\2c transparent\)\] {
+  -webkit-mask-image: radial-gradient(100% 100% at top right,white,transparent);
+          mask-image: radial-gradient(100% 100% at top right,white,transparent);
+}
+
+/* Your custom styles and Tailwind CSS classes go here */
+
+.hover\:bg-red-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.focus-visible\:outline:focus-visible {
+  outline-style: solid;
+}
+
+.focus-visible\:outline-2:focus-visible {
+  outline-width: 2px;
+}
+
+.focus-visible\:outline-offset-2:focus-visible {
+  outline-offset: 2px;
+}
+
+.focus-visible\:outline-indigo-400:focus-visible {
+  outline-color: #818cf8;
+}
+
+@media (min-width: 640px) {
+  .sm\:left-\[calc\(50\%-18rem\)\] {
+    left: calc(50% - 18rem);
+  }
+
+  .sm\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .sm\:col-start-auto {
+    grid-column-start: auto;
+  }
+
+  .sm\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .sm\:mt-20 {
+    margin-top: 5rem;
+  }
+
+  .sm\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .sm\:mt-32 {
+    margin-top: 8rem;
+  }
+
+  .sm\:mt-56 {
+    margin-top: 14rem;
+  }
+
+  .sm\:max-w-5xl {
+    max-width: 64rem;
+  }
+
+  .sm\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .sm\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .sm\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+
+  .sm\:pb-40 {
+    padding-bottom: 10rem;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:left-48 {
+    left: 12rem;
+  }
+
+  .lg\:top-\[calc\(50\%-30rem\)\] {
+    top: calc(50% - 30rem);
+  }
+
+  .lg\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .lg\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
+  .lg\:mr-0 {
+    margin-right: 0px;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:mt-16 {
+    margin-top: 4rem;
+  }
+
+  .lg\:mt-24 {
+    margin-top: 6rem;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:max-w-none {
+    max-width: none;
+  }
+
+  .lg\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .lg\:flex-none {
+    flex: none;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:pt-40 {
+    padding-top: 10rem;
+  }
+
+  .lg\:pt-8 {
+    padding-top: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:left-\[calc\(50\%-24rem\)\] {
+    left: calc(50% - 24rem);
+  }
+
+  .xl\:ml-32 {
+    margin-left: 8rem;
+  }
+}
+
+</style>
+<body>
+    <!-- component -->
+    <div class=" relative">
+        <div class="bg-fixed bg-cover"
+            style="background-image: url('https://cdn.dribbble.com/users/497438/screenshots/1543231/heart.gif');">
+            <!-- <div class="bg-fixed bg-red-600"> -->
+            <main class="relative z-10">
+                <main>
+
+                    <!-- Hero section -->
+                    <div class="relative isolate overflow-hidden">
+
+
+                        <nav class="bg-opacity-20 backdrop-blur-md bg-blue-400 padding-x py-0 fixed z-50 w-full">
+                            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                                    <img src="https://media.tenor.com/91scJf-xrKEAAAAj/emoji-coraz%C3%B3n-humano.gif"
+                                        class="h-8" alt="Flowbite Logo" />
+                                    <span
+                                        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Precision
+                                        Health</span>
+                                </a>
+                                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                                    <button type="button" href="#formsubmit"
+                                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get
+                                        started</button>
+                                    <button data-collapse-toggle="navbar-cta" type="button"
+                                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                        aria-controls="navbar-cta" aria-expanded="false">
+                                        <span class="sr-only">Open main menu</span>
+                                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 17 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                                    id="navbar-cta">
+                                    <ul
+                                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                                        <li>
+                                            <a href="#"
+                                                class="block py-2 px-3 md:p-0  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                                                aria-current="page">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#about"
+                                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="#formsubmit"
+                                                class="block py-2 px-3 md:p-0  text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                        <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+                            aria-hidden="true">
+                            <defs>
+                                <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%"
+                                    y="-1" patternUnits="userSpaceOnUse">
+                                    <path d="M.5 200V.5H200" fill="none" />
+                                </pattern>
+                            </defs>
+                            <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
+                                <path
+                                    d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
+                                    stroke-width="0" />
+                            </svg>
+                            <rect width="100%" height="100%" stroke-width="0"
+                                fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
+                        </svg>
+                        <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+                            aria-hidden="true">
+                            <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#ff0000] to-[#f1f1f1] opacity-20"
+                                style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)">
+                            </div>
+                        </div>
+                        <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-40 lg:flex lg:px-8 lg:pt-40">
+                            <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
+                                <img class="h-11"
+                                    src="https://media.tenor.com/91scJf-xrKEAAAAj/emoji-coraz%C3%B3n-humano.gif"
+                                    alt="Your Company">
+                                <div class="mt-24 sm:mt-32 lg:mt-16">
+                                    <a href="#" class="inline-flex space-x-6">
+                                        <span
+                                            class="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-gray-900 ring-1 ring-inset ring-indigo-500/20">Latest
+                                            updates</span>
+                                            
+                                        <span
+                                            class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-800">
+                                            <span>Conact Hospital</span>
+                                            <svg class="h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor"
+                                                aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                                <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-600 sm:text-6xl">Instant
+                                    Insights,
+                                    0.5s</h1>
+                                <p class="mt-6 text-lg leading-8 text-gray-900">Precision Health : Safeguarding Hearts ❤
+                                    24/7.
+                                    Timely Solutions for Vital Well-being and Expert Chat Support!</p>
+                                <div class="mt-10 flex items-center gap-x-6">
+                                    <a href="#formsubmit"
+                                        class="rounded-md bg-red-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get
+                                        started</a>
+                                    <a href="#formsubmit" class="text-sm font-semibold leading-6 text-slate-900">Live demo
+                                        <span aria-hidden="true">→</span></a>
+                                </div>
+                            </div>
+                            <div
+                                class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+                                <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+                                    <img src="https://www.myheart.org.sg/wp-content/uploads/2022/01/Know-the-Signs-and-Symptoms-of-a-Heart-Attack-scaled.jpg"
+                                        alt="App screenshot" width="2432" height="1442"
+                                        class="w-[76rem] rounded-md shadow-2xl ring-1 ring-white/10">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Logo cloud -->
+                    <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
+                        <h2 class="text-center text-lg font-semibold leading-8 bg-gray-600 text-white rounded-xl animate-pulse">Our Creators
+                        </h2>
+
+                        <!-- component -->
+                        <div class="flex items-center mt-10 justify-center">
+                            <div
+                                class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+                                <!-- 1 card -->
+                                <div class="relative bg-gray-500 py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+                                    <div
+                                        class=" text-white flex items-center absolute rounded-full shadow-xl bg-pink-500 left-4 -top-6">
+                                        <!-- svg  -->
+                                        <img src="https://i.ibb.co/6PrMwpQ/Whats-App-Image-2024-03-11-at-10-36-19-PM.jpg"
+                                            class="h-16 w-16 rounded-full" />
+
+                                    </div>
+                                    <div class="mt-8">
+                                        <p class="text-xl font-semibold my-2">Shubham Kumar</p>
+                                        <div class="flex space-x-2 text-gray-400 text-sm">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                            <p>Machine Learning Lead</p>
+                                        </div>
+                                        <div class="flex space-x-2 text-gray-400 text-sm my-3">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <p>1 Weeks Left</p>
+                                        </div>
+                                        <div class="border-t-2"></div>
+
+                                        <div class="flex justify-between">
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Socials</p>
+                                                <div class="flex space-x-2">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAaVBMVEX///8XFRUAAAD6+vr19fUUEhIPDQ2lpaUqKioFAAAMCQnu7u7y8vLT09Pb29sIBQV8e3vi4uKsrKzo6OjLy8txcXFGRUWNjY22tbVRUFA8Ozuampq+vr4mJSVdXFwyMjJmZWUdHByEg4Mg1T6LAAAJz0lEQVR4nO1d67ayKhT9XAomXjOveUl9/4c8WntXGhAh2B5nOH82GuKExWJd8d+/HTt27NixY8eOHTt27NixY8eOHb8wLc91j0ldxFcUdXJ0Xc8yzW+/2IfwTkFS5OkZXnDp8jgJTt6331AQ3shjKPvpzR1kLICc6XejHIok+POE3CTOy+l9yQuPJ+DpH+W4RKdvvy8bXmJHk2TxeDww/vGc2snfXJ+jnWYAoRiTm8yFVz7Bt9/8BX40bpNPmPzwIdCXafLtt58h6S7g4E+Z3Nfn0v0dOn5pgCSTG7CDyr9BJ2hFtzxveUbt9v29cxoUULkCID1+lYpbNIqoXOmg+HsHj+l3ECqjMoJAm3zJcjvZBqikMgGc6iuy5qdAVHOZFucLatqKM4W75QkIzvbGJo47NMpF7BfQR+6WXI4lXnVK8oHxlmfOsdcjYr9AQPytuNRqFTINBOJtuBR6l+UGBPYGVMxqCy4jINd+fnoV2oaLgXCuWUVbVa9Rjc2BkV42ln3QcOqzQJpKIxszPmjXY3M2tqWNTH1xtuRiGOGh0KUFAn0mDAtOo+n0dC+bcxkVdKPFXzPLL3AZ2Zx1CNpA44IxVnXuIISp1iuk6rnUNC7kcrk0yJENmT2AHcD9+DAqm0I1F5cWGQvPdVLHeVo2q0I0yJnCmrk9PowmyggUe9JWR1uYX9P2WORlKBsHRNeEQHDbGQl1mFbt2Um1yBA8BgniFMnQGal09pP6pT1jtNJUcvHPtJMfsuf/nOoUf6zvwOmKmRBRJSC8KAxyWBHVioFq/je3bpcBG0ScpxzgMgOFISsWx0hMnQ9I1UUFYoMqQPByOrtxf3+Z2/v356zt0hFdm52b22+/lIBU7vIQcalkEFbmqh1buvgAxQp0u3FxwumVs6hKgqPrWXd4U97WjrIbIwTl6fU8NOkbT11YvaJzIT31bE4ADulSeubw6ildSD0+TNbEVWoMAfrunzQm/fmmkDXl0tWtSTU0Jm9AiQ6wGAtjQKTDamKOpsTt9FkOmZ6IA12dTUKtYGmsnHV46CFTMIeL1nudx57l9W9MBpPVCs1kybAuMjZ7vGHteC5zYTZWAOPShGudTtZ+NNiqeRVYqvk64FozgGMJY9BBhuOcY1j37CPPDtZChuflwTrtzDAufp5dK2LwhIA7YLnm0dx50hJqYJ5qE569wc/BVPpXOCtlmIYzd8RVKoArZWjpnKmATXi+t7NCzixq6Oc+TZE6Dg9wc1n4IO9xFj1PtbRaAqdexJEGZMinOumu/w0EaaqkCDIOm1Ba51glhwxUulInvARwWMrqM//MTpNBpi1Tf0o5RsBZVh5szpbRmacv2LFrhGQ1KGeGtBYhuryBJTcNPb58myAdR8wDscEUCejklHNQMjOYRFp0144cSopEfWH7Zam+LPAE9lmDD3LZGvb+R6HSsPxHQxty5lnO1Pf4osH4f4afsYVCah45DmxYaq4KtdgWrlxYg6MgtXj/M0RMDQCpjEkYsGcn1GIvPyPHLBGHVkad+Uz9qDgtRwNbAziljB2VMC0z1Guv0qsPLIuGnGWUT9Gwnoca5Zn5JXymW4h7mcFjZg8cOmjWzDwyyJExcdlB36+SkQtqcMg0/ysyX9wzysn02iuokw3JbKCa2R6NYjKGVtdsQtFsRka/BVBxfE21ZL5qmykn43TarWZOkEuGDNsCMBzF1WwvMDumC4CIjCpl22YGyTR3HrnsiAaWOuQSRsmMsYXbzI6lhlKBIbY/M6ozzbo5ZkuFnD/D8TQ1pWYe4CQD5TxNbpC009qEbHHjszIhTV55AdG7aZKMnUuRLDrhrPX3Ys2ScbN/Nu+ROuWMlwmUjWhyYs2jJ65RzjiHgrSAB9wsYK4vdM4ubJLPAnjs/Mx0dmlLAwa8Rh3oJC0pXhJb39KYNrcWSPaE4+U0DXLQtDQBZ8escHJ52WZtCSeTWwpEpKXbYltn0yTpSTjXbLfMmCwz6RlMuW2ZmGjI0ngGt63Vka8K49bOTPfEKGTxA377JJIKNN/gcquaprZDhTSueNM+iS8r+mi4m2ZiIy/CNJi8k23CmnqzN5WAE5tW4UUk7jsu67ocLfSmJw5B6SuK1Jh++64/EqNVgvB2rsZ9YytZHDfm1Zn9jNWtGsJ/39/noEhB7UkSCVz89Nrk9hkOcxVw7SZbjIrhPKwcxR8ygSZP57BulEVcEy6DbU8XZc7tnBCyNXSSkYrIDRCrewFc9PTe0AWWaVpukPeL1QmdSyu3d052exG7lIegtZtzZvfB/Uao4/I+MIQddGjtDw2cY1U2WLRnXUG/zulJX6KnBsOiX04nut7C2lb+SycpBaab3O515dqVs8fD+rDDrOcMQX5f6prqIKCrgsha3h1lnt1m+LmVVnBhFFgbQfP80lDeb+1jBzwIHLja2r983qBOGhXB+kU7IID9y4ZZgPy2XI8X+GFAkZu+6KDFj/JsRswTwfBmYDP/9JpaR1EAZXlv1iOc6dEv1REoR/Wzz67jQY6i3uaXfABGvw4z9ZYIoQjK8NnSyMX+qbAXV2eF99p5WvRBKLfFqVqgACusPHgJB95bNGkuCMlETmpeuPQF0qE/GpZBp0fR1/HV0RVrc+OkYF6nR234dFho4UfZ5+nFsIFB5Imx+E1Cgk8Ux2IBnoJmpn1wwh+jBCEcglicPuFHfmYzt6qjkYJjM59/GB4bI0izhlwdnbC/lJGY3nHZ1TELkEZ5fC6eC9r8GohTnKdd16VDJex0WsyS0gW0RE4Xx/3SvDDNzz6SYYqSUb1hrliUtJOVd8KZguYZtFri84sk0Erdb4qdmtpaqJLZnYArFaYYGVBzQwsNhfEsGuvYCIkZMTSWttozpwqtaTsXIYP13qZbzV1EkM8Fmu/vSsV6SycmM3nGxoE0kHM03pPBksUYHyAPZy+BANri6Hq3Q8Y0PfcktlhvyRDdjW0TcrI0LIFkURXXdV3Y1VAekNBSvSNDyAZcJi2wdEXw7BtTBxVkwk1u0h5hc++gJSrIQLMRl3//al4qRQUZyLT3gTzgd+xopDAZdms5dJvdpD/hFDE/pLGaDIFo4y+3mDFiiBoWI8P0ZwDF23+2JWB8GWQdGQS6C8AZyKlfoVhDBkG/yelCQ5Lh1+gXPgh5UzQyIc6++FEtM89eFIE0GQKZ/o80cOFH50WuRZIMhnO0qUKmwayjZkZHigyGJqr/wldD3TrCT5pAggwCHNWbfg2IAzcZ4G594kaMzL0RgwAMyV+hMsELquanckM0mPoT6wFoqj/30VPTLW53F4ter368/TsrRDLtX8CpKjPxL2G5UVZWf/jDrTt27NixY8eOHTt27NixY8eOv4r/AGS5jKsfz6j5AAAAAElFTkSuQmCC"
+                                                        class="w-6 h-6 rounded-full" />
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Woman_7.jpg"
+                                                        class="w-6 h-6 rounded-full" />
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxSqK0tVELGWDYAiUY1oRrfnGJCKSKv95OGUtm9eKG9HQLn769YDujQi1QFat32xl-BiY&usqp=CAU"
+                                                        class="w-6 h-6 rounded-full" />
+                                                </div>
+                                            </div>
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Progress</p>
+                                                <div class="text-base text-gray-400 font-semibold">
+                                                    <p>34%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2 card -->
+                                <div class="relative bg-gray-600 py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+                                    <div
+                                        class=" text-white flex items-center absolute rounded-full  shadow-xl bg-green-500 left-4 -top-6">
+                                        <img src="https://i.ibb.co/n7yCPrx/Whats-App-Image-2024-03-11-at-10-40-03-PM.jpg"
+                                            class="h-16 w-16 rounded-full" />
+
+                                    </div>
+                                    <div class="mt-8">
+                                        <p class="text-xl font-semibold my-2">Shivangshu Prasad</p>
+                                        <div class="flex space-x-2 text-gray-400 text-sm">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                            <p>ML assitance & Lead Researcher</p>
+                                        </div>
+                                        <div class="flex space-x-2 text-gray-400 text-sm my-3">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <p>3 Weeks Left</p>
+                                        </div>
+                                        <div class="border-t-2 "></div>
+
+                                        <div class="flex justify-between">
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Team Member</p>
+                                                <div class="flex space-x-2">
+                                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                        class="w-6 h-6 rounded-full" />
+                                                </div>
+                                            </div>
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Progress</p>
+                                                <div class="text-base text-gray-400 font-semibold">
+                                                    <p>76%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3 card -->
+                                <div class="relative  bg-gray-500 py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+                                    <div
+                                        class=" text-white flex items-center absolute rounded-full shadow-xl bg-blue-500 left-4 -top-6">
+                                        <img src="https://i.ibb.co/PTRjvvc/Whats-App-Image-2024-03-11-at-11-02-24-PM.jpg"
+                                            class="h-16 w-16 rounded-full" />
+
+                                    </div>
+                                    <div class="mt-8">
+                                        <p class="text-xl font-semibold my-2">Abhinav Roy</p>
+                                        <div class="flex space-x-2 text-gray-400 text-sm">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                            <p>Front-End assistance</p>
+                                        </div>
+                                        <div class="flex space-x-2 text-gray-400 text-sm my-3">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <p>2 Days Left</p>
+                                        </div>
+                                        <div class="border-t-2 "></div>
+
+                                        <div class="flex justify-between">
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Team Member</p>
+                                                <div class="flex space-x-2">
+                                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                        class="w-6 h-6 rounded-full" />
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxSqK0tVELGWDYAiUY1oRrfnGJCKSKv95OGUtm9eKG9HQLn769YDujQi1QFat32xl-BiY&usqp=CAU"
+                                                        class="w-6 h-6 rounded-full" />
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Woman_7.jpg"
+                                                        class="w-6 h-6 rounded-full" />
+                                                </div>
+                                            </div>
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Progress</p>
+                                                <div class="text-base text-gray-400 font-semibold">
+                                                    <p>4%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4 card -->
+                                <div class="relative  bg-gray-600 py-6 px-6 rounded-3xl w-64 my-4 shadow-xl">
+                                    <div
+                                        class=" text-white flex items-center absolute rounded-full shadow-xl bg-yellow-500 left-4 -top-6">
+                                        <img src="https://i.ibb.co/YRddZ4N/grey-shirt-1-1.png"
+                                            class="h-16 w-16 rounded-full" />
+
+                                    </div>
+                                    <div class="mt-8">
+                                        <p class="text-xl font-semibold my-2">Rohit Ghosh</p>
+                                        <div class="flex space-x-2 text-gray-400 text-sm">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                            </svg>
+                                            <p>Lead Front-end dev & DB Manager</p>
+                                        </div>
+                                        <div class="flex space-x-2 text-gray-400 text-sm my-3">
+                                            <!-- svg  -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            <p>1 Month Left</p>
+                                        </div>
+                                        <div class="border-t-2 "></div>
+
+                                        <div class="flex justify-between">
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Team Member</p>
+                                                <div class="flex space-x-2">
+                                                    <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                                        class="w-6 h-6 rounded-full" />
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Woman_7.jpg"
+                                                        class="w-6 h-6 rounded-full" />
+                                                </div>
+                                            </div>
+                                            <div class="my-2">
+                                                <p class="font-semibold text-base mb-2">Progress</p>
+                                                <div class="text-base text-gray-400 font-semibold">
+                                                    <p>90%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="about">
+
+                    </div>
+                    <!-- component -->
+                    <div id="popup1" class="">
+                        <div class="container m-auto px-6 py-20 md:px-12 lg:px-20">
+                            <div class="m-auto text-center lg:w-8/12 xl:w-7/12">
+                                <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">The Features.</h2>
+                            </div>
+                            <div
+                                class="mt-12 m-auto -space-y-4 items-center justify-center md:flex md:space-y-0 md:-space-x-4 xl:w-10/12">
+                                <div class="relative z-10 -mx-4 group md:w-6/12 md:mx-0 lg:w-5/12">
+                                    <div aria-hidden="true"
+                                        class="absolute top-0 w-full h-full rounded-2xl bg-gray-200 shadow-xl transition duration-500 group-hover:bg-gray-400 group-hover:scale-105 lg:group-hover:scale-110">
+                                    </div>
+                                    <div class="relative p-6 space-y-6 lg:p-8">
+                                        <h3 class="text-3xl text-gray-700 font-semibold text-center"> Our Prediction</h3>
+                                        <div>
+                                            <div class="relative flex justify-around">
+                                                <div class="flex items-end">
+                                                    <span class="text-8xl text-gray-800 font-bold leading-0">92.1</span>
+                                                    <div class="pb-2">
+                                                        <span class="block text-2xl text-gray-700 font-bold">%</span>
+                                                        <span class="block text-xl text-purple-500 font-bold">accurate</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul role="list" class="w-max space-y-4 py-6 m-auto text-gray-600">
+                                            <li class="space-x-2">
+                                                <span class="text-purple-500 font-semibold">&check;</span>
+                                                <span>As user grows, we optimize data efficiency.</span>
+                                            </li>
+                                            <li class="space-x-2">
+                                                <span class="text-purple-500 font-semibold">&check;</span>
+                                                <span>Easy access.</span>
+                                            </li>
+                                            <li class="space-x-2">
+                                                <span class="text-purple-500 font-semibold">&check;</span>
+                                                <span>Avoid daily doctor visits; one click does it all.</span>
+                                            </li>
+                                        </ul>
+                                        <p
+                                            class="flex items-center justify-center space-x-4 text-lg text-gray-600 text-center">
+                                            <span>Call us at</span>
+                                            <a href="tel:+24300" class="flex space-x-2 items-center text-purple-600">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                                </svg>
+                                                <span class="font-semibold">+1 000 000</span>
+                                            </a>
+                                            <span>or</span>
+                                        </p>
+                                        <button type="submit" title="Submit"
+                                            class="block w-full py-3 px-6 text-center rounded-xl transition bg-purple-600 hover:bg-purple-700 active:bg-purple-800 focus:bg-indigo-600">
+                                            <span class="text-white font-semibold">
+                                                Send us an email
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="relative group md:w-6/12 lg:w-7/12">
+                                    <div aria-hidden="true"
+                                        class="absolute top-0 w-full h-full rounded-2xl  bg-gray-200 shadow-lg transition duration-500 group-hover:bg-gray-400 group-hover:scale-105">
+                                    </div>
+                                    <div class="relative p-6 pt-16 md:p-8 md:pl-12 md:rounded-r-2xl lg:pl-20 lg:p-16">
+                                        <ul role="list" class="space-y-4 py-6 text-gray-600">
+                                            <li class="space-x-2">
+                                                <span class="text-purple-500 font-semibold">&check;</span>
+                                                <span>connect with Hospital</span>
+                                            </li>
+                                            <li class="space-x-2">
+                                                <span class="text-purple-500 font-semibold">&check;</span>
+                                                <span>daily check up</span>
+                                            </li>
+                                            <li class="space-x-2">
+                                                <span class="text-purple-500 font-semibold">&check;</span>
+                                                <span>24/7 chat-bot</span>
+                                            </li>
+                                            <li class="space-x-2">
+                                                <span class="text-purple-500 font-semibold">&check;</span>
+                                                <span>self learning software</span>
+                                            </li>
+                                        </ul>
+                                        <p class="text-gray-700">Team can be any size, and you can add or switch members
+                                            as needed. Companies using our platform include:</p>
+                                        <div class="mt-6 flex justify-between gap-6">
+                                            <img class="w-16 lg:w-24"
+                                                src="https://thechristhospital.com/PublishingImages/News%20Release/TBP_GOLD+_2023.png"
+                                                loading="lazy" alt="airbnb">
+                                            <img class="w-8 lg:w-16"
+                                                src="https://www.thechristhospital.com/PublishingImages/Awards%20and%20Other%20Logos/TBP%20Silver%20Award%202022.png"
+                                                loading="lazy" alt="bissell">
+                                            <img class="w-6 lg:w-12"
+                                                src="https://threebestrated.in/awards/cardiologists-hyderabad-2024-drk.svg"
+                                                loading="lazy" alt="ge">
+                                            <img class="w-20 lg:w-28"
+                                                src="https://cdn.who.int/media/images/default-source/infographics/logo-who.tmb-1200v.jpg?sfvrsn=2fcc68a0_35"
+                                                loading="lazy" alt="microsoft">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="formsubmit" class="h-screen  ">
+                        <div class="container h-full px-6 py-24">
+                            <div class="flex h-full flex-wrap items-center justify-center lg:justify-between">
+                                <!-- Left column container with background-->
+                                <div class="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
+                                    <img src="https://i.ibb.co/N9mhx0d/output-onlinegiftools.gif" class="w-full"
+                                        alt="Phone image" />
+                                </div>
+
+                                <!-- Right column container with form -->
+                                <div class="md:w-8/12 lg:ms-6 lg:w-5/12">
+
+                                    <form id="myForm">
+                                        <div class="grid gap-6 mb-6 md:grid-cols-2">
+                                            <div>
+                                                <label for="age"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">AGE</label>
+                                                <input type="number" id="age"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required placeholder="(1-100) Age" />
+                                            </div>
+                                            <div>
+                                                <label for="sex"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">SEX</label>
+                                                <select id="sex" name="sex"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required>
+                                                    <option value="0">Male</option>
+                                                    <option value="1">Female</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="cp"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">CHEST
+                                                    PAIN</label>
+                                                <select id="cp" name="cp"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required>
+                                                    <option value="0">ATA</option>
+                                                    <option value="1">NAP</option>
+                                                    <option value="2">ASY</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="bp"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Resting
+                                                    BP</label>
+                                                <input type="number" id="bp"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="(90 to 200) Resting blood pressure" required />
+                                            </div>
+                                            <div>
+                                                <label for="chol"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Serum
+                                                    Cholestral</label>
+                                                <input type="number" id="chol"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="(100 to 500) Serumcholestoral mg/dl" required />
+                                            </div>
+                                            <div>
+                                                <label for="fbs"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Fasting
+                                                    blood Sugar</label>
+                                                <select id="fbs" name="fbs"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required>
+                                                    <option value="0">No</option>
+                                                    <option value="1">Yes</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="restecg"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Resting
+                                                    Electrcardiographic</label>
+                                                <select id="restecg" name="restecg"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required>
+                                                    <option value="0">Normal</option>
+                                                    <option value="1">ST</option>
+                                                    <option value="2">LVH</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="thalach"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Heart
+                                                    Rate</label>
+                                                <input type="number" id="thalach"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="(70 to 200) Maximum heart rate achieved" required />
+                                            </div>
+                                            <div>
+                                                <label for="exang"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Excercise
+                                                    induced angina</label>
+                                                <select id="exang" name="exang"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required>
+                                                    <option value="0">No</option>
+                                                    <option value="1">Yes</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="oldpeak"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Old
+                                                    Peak</label>
+                                                <input type="number" id="oldpeak"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="(0 to 10) Oldpeak" required />
+                                            </div>
+                                            <div>
+                                                <label for="slope"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Slope</label>
+                                                <select id="slope" name="slope"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required>
+                                                    <option value="0">Up 🔼</option>
+                                                    <option value="1">Flat ⏺</option>
+                                                    <option value="2">Down 🔽</option>
+                                                </select>
+                                            </div>
+
+                                            <div>
+                                                <label for="ca"
+                                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Number
+                                                    of Vessels</label>
+                                                <select id="ca" name="ca"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    required>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="mb-6">
+                                            <label for="thal"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thal</label>
+                                            <select id="thal" name="thal"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                required>
+                                                <option value="0">Normal</option>
+                                                <option value="1">Fixed Defect</option>
+                                                <option value="2">Reversible Defect</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" id="submitButton"
+                                            class="submit-button text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            Submit
+                                        </button>
+                                    </form>
+                                    <script>
+                                        // Get the form and the submit button
+                                        const form = document.getElementById('myForm');
+                                        const submitButton = document.getElementById('submitButton');
+                                      
+                                        // Function to handle form submission
+                                        function handleSubmit(event) {
+                                          event.preventDefault(); // Prevent default form submission behavior
+                                          // Gather data from form fields
+                                          const formData = {
+                                            age: document.getElementById('age').value,
+                                            sex: document.getElementById('sex').value,
+                                            cp: document.getElementById('cp').value,
+                                            bp: document.getElementById('bp').value,
+                                            chol: document.getElementById('chol').value,
+                                            fbs: document.getElementById('fbs').value,
+                                            restecg: document.getElementById('restecg').value,
+                                            thalach: document.getElementById('thalach').value,
+                                            exang: document.getElementById('exang').value,
+                                            oldpeak: document.getElementById('oldpeak').value,
+                                            slope: document.getElementById('slope').value,
+                                            ca: document.getElementById('ca').value,
+                                            thal: document.getElementById('thal').value,
+                                          };
+                                          // Log the data to the console
+                                          console.log(formData);
+                                        }
+                                      
+                                        // Add event listener to the submit button
+                                        submitButton.addEventListener('click', handleSubmit);
+                                      </script>
+                                    <div id="popup"
+                                        class="fixed z-10 inset-0 overflow-y-auto hidden bg-black bg-opacity-50 flex justify-center items-center">
+                                        <div class="relative bg-white w-96 p-6 rounded-lg">
+                                            <button id="closeButton" class="absolute top-0 right-0 p-2"
+                                                onclick="closePopup()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                            <!-- Popup content -->
+                                            <p>Popup content goes here.</p>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        document.getElementById('submitButton').addEventListener('click', function (event) {
+                                            event.preventDefault();
+                                            document.getElementById('popup').classList.remove('hidden');
+                                        });
+
+                                        function closePopup() {
+                                            document.getElementById('popup').classList.add('hidden');
+                                        }
+                                    </script>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <script src={{ url_for('static', filename='JS/type.js' ) }}></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+                        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script>
+                        var typed = new Typed('.box', {
+                            strings: ['Age', 'Sex', 'Chest pain type (4 values)', 'Resting blood pressure',
+                                "Serum cholestoral in mg/dl", "Fasting blood sugar > 120 mg/dl", "Resting electrocardiographic", "Maximum heart rate achieved", "Exercise induced angina", "Oldpeak", "The slope of the peak exercise ST segment", "Number of major vessels (0-3)", "Thal"],
+                            typeSpeed: 40,
+                            backspaceSpeed: 20,
+                            backspaceDelay: 80,
+                            repeatDelay: 10,
+                            repeat: true,
+                            autoStart: true,
+                            startDelay: 10,
+                            loop: true,
+                        });
+                        function display() {
+                            loading.style.display = "none";
+                            result_div.style.display = "block";
+                        }
+                        document.getElementById("result").style.display = "none";
+                        document.getElementById("loading").style.display = "none";
+                        document.getElementById("result_title").style.display = "none";
+                        document.getElementById('postform').addEventListener('submit', getData);
+                        function getData(e) {
+                            e.preventDefault();
+                            age = document.getElementById("age").value;
+                            sex = document.getElementById("sex").value;
+                            cp = document.getElementById("cp").value;//0-3
+                            bp = document.getElementById("bp").value;//90-200
+                            chol = document.getElementById("chol").value;//100-500
+                            fbs = document.getElementById("fbs").value;//0-1
+                            restecg = document.getElementById("restecg").value;//0-2
+                            thalach = document.getElementById("thalach").value;//70-200
+                            exang = document.getElementById("exang").value;//0-1
+                            oldpeak = document.getElementById("oldpeak").value;//0-10
+                            slope = document.getElementById("slope").value;//0-2
+                            ca = document.getElementById("ca").value;//0-3
+                            thal = document.getElementById("thal").value;//0-2
+                            var params = { Age: age, Sex: sex, Cp: cp, Bp: bp, Chol: chol, Fbs: fbs, Restecg: restecg, Thalach: thalach, Exang: exang, Oldpeak: oldpeak, Slope: slope, Ca: ca, Thal: thal };
+                            var xhr = new XMLHttpRequest();
+                            xhr.open('post', '../reply', true)
+                            xhr.setRequestHeader('Content-type', 'application/json');
+                            xhr.onload = function () {
+                                result = Number(this.responseText);
+                                result_div = document.getElementById("result");
+                                loading = document.getElementById("loading");
+                                result_title = document.getElementById("popup");
+                                result_div.style.display = "none";
+                                loading.style.display = "block";
+                                result_title.style.display = "block";
+                                window.scrollBy(0, 170);
+                                setTimeout(display, 3000);
+                                if (result == 1) {
+                                    result_div.classList.remove("result_shadow_success");
+                                    result_div.innerText = "Bad News! Your test is Positive [1], You face some Heart Disease";
+                                    result_div.classList.add("result_shadow_danger");
+                                }
+                                else {
+                                    result_div.classList.remove("result_shadow_danger");
+                                    result_div.innerText = "Good News! Your test is Negative [0], You don't face any Heart Disease";
+                                    result_div.classList.add("result_shadow_success");
+                                }
+                            }
+                            xhr.send(JSON.stringify(params));
+                        }
+                        setTimeout(function () {
+                            $('.loader_bg').fadeToggle();
+                        }, 1000);
+                    </script>
+
+                    <!-- Web3Forms Popup Widget Starts here -->
+                    <div id="web3forms__widget" x-data="{ open: true }"
+                        x-init="() => setTimeout(() => open = false, 2000)">
+                        <!-- x-init is only for demo purpose. you may remove it.  -->
+                        <div id="w3f__widget--content" x-show="open" x-transition:enter-start="opacity-0 translate-y-5"
+                            x-transition:enter="transition duration-200 transform ease"
+                            x-transition:leave="transition duration-200 transform ease"
+                            x-transition:leave-end="opacity-0 translate-y-5" @click.away="open = false"
+                            class="fixed flex flex-col z-50 bottom-[100px] top-0 right-0 h-auto left-0 sm:top-auto sm:right-5 sm:left-auto h-[calc(100%-95px)] w-full sm:w-[350px] overflow-auto min-h-[250px] sm:h-[600px] border border-gray-300 bg-white shadow-2xl rounded-md">
+                            <div class="flex p-5 flex-col justify-center items-center h-32 bg-indigo-600">
+                                <h3 class="text-lg text-white">How can we help?</h3>
+                                <p class="text-white opacity-50">We usually respond in a few hours</p>
+                            </div>
+                            <div class="bg-gray-50 flex-grow p-6">
+
+                                <form action="https://api.web3forms.com/submit" method="POST" id="form"
+                                    class="needs-validation" novalidate>
+                                    <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE" />
+                                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+
+                                    <div class="mb-4">
+                                        <label for="full_name"
+                                            class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full
+                                            Name</label>
+                                        <input type="text" name="name" id="full_name" placeholder="John Doe" required
+                                            class="w-full px-3 py-2 bg-white placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+                                        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                            Please provide your full name.
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="mb-4">
+                                        <label for="email"
+                                            class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email
+                                            Address</label>
+                                        <input type="email" name="email" id="email" placeholder="you@company.com"
+                                            required
+                                            class="w-full px-3 py-2 bg-white placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+                                        <div class="empty-feedback text-red-400 text-sm mt-1">
+                                            Please provide your email address.
+                                        </div>
+                                        <div class="invalid-feedback text-red-400 text-sm mt-1">
+                                            Please provide a valid email address.
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mb-4">
+                                        <label for="message"
+                                            class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your
+                                            Message</label>
+
+                                        <textarea rows="4" name="message" id="message" placeholder="Your Message"
+                                            class="w-full h-28 px-3 py-2 bg-white placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                                            required></textarea>
+                                        <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                                            Please enter your message.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <button type="submit"
+                                            class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                    <p class="text-xs text-center text-gray-400" id="result">
+                                        <span>Powered by <a href="https://Web3Forms.com" class="text-gray-600"
+                                                target="_blank" rel="noopener noreferrer">Web3Forms</a></span>
+                                    </p>
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <button id="w3f__widget--btn" @click="open = !open"
+                            class="fixed z-40 right-5 bottom-5 shadow-lg flex justify-center items-center w-14 h-14 bg-indigo-500 rounded-full focus:outline-none hover:bg-indigo-600 focus:bg-indigo-600 transition duration-300 ease">
+                            <svg class="w-6 h-6 text-white absolute" x-show="!open"
+                                x-transition:enter-start="opacity-0 -rotate-45 scale-75"
+                                x-transition:enter="transition duration-200 transform ease"
+                                x-transition:leave="transition duration-100 transform ease"
+                                x-transition:leave-end="opacity-0 -rotate-45" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+
+                            <svg class="w-6 h-6 text-white absolute" x-show="open"
+                                x-transition:enter-start="opacity-0 rotate-45 scale-75"
+                                x-transition:enter="transition duration-200 transform ease"
+                                x-transition:leave="transition duration-100 transform ease"
+                                x-transition:leave-end="opacity-0 rotate-45" xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+
+                    </div>
+
+                    <style>
+                        .invalid-feedback,
+                        .empty-feedback {
+                            display: none;
+                        }
+
+                        .was-validated :placeholder-shown:invalid~.empty-feedback {
+                            display: block;
+                        }
+
+                        .was-validated :not(:placeholder-shown):invalid~.invalid-feedback {
+                            display: block;
+                        }
+
+                        .is-invalid,
+                        .was-validated :invalid {
+                            border-color: #dc3545;
+                        }
+
+                        .is-invalid,
+                        .was-validated :invalid:focus {
+                            --tw-ring-color: rgba(220, 53, 69, 0.2);
+                        }
+                    </style>
+
+                    <!-- Web3Forms Popup Widget End here -->
+
+                    <main class="h-screen flex flex-col space-y-2 items-center justify-center ">
+                        <div class="flex flex-col items-center justify-center -translate-x-1/2">
+
+
+
+                        </div>
+                    </main>
+
+                    <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
+                    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+                    <script>
+                        (function () {
+                            "use strict";
+                            /*
+                             * Form Validation
+                             */
+
+                            // Fetch all the forms we want to apply custom validation styles to
+                            const forms = document.querySelectorAll(".needs-validation");
+                            const result = document.getElementById("result");
+                            // Loop over them and prevent submission
+                            Array.prototype.slice.call(forms).forEach(function (form) {
+                                form.addEventListener(
+                                    "submit",
+                                    function (event) {
+                                        if (!form.checkValidity()) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+
+                                            form.querySelectorAll(":invalid")[0].focus();
+                                        } else {
+                                            /*
+                                             * Form Submission using fetch()
+                                             */
+
+                                            const formData = new FormData(form);
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                            const object = {};
+                                            formData.forEach((value, key) => {
+                                                object[key] = value;
+                                            });
+                                            const json = JSON.stringify(object);
+                                            result.innerHTML = "Please wait...";
+
+                                            fetch("https://api.web3forms.com/submit", {
+                                                method: "POST",
+                                                headers: {
+                                                    "Content-Type": "application/json",
+                                                    Accept: "application/json"
+                                                },
+                                                body: json
+                                            })
+                                                .then(async (response) => {
+                                                    let json = await response.json();
+                                                    if (response.status == 200) {
+                                                        result.innerHTML = json.message;
+                                                        result.classList.remove("text-gray-500");
+                                                        result.classList.add("text-green-500");
+                                                    } else {
+                                                        console.log(response);
+                                                        result.innerHTML = json.message;
+                                                        result.classList.remove("text-gray-500");
+                                                        result.classList.add("text-red-500");
+                                                    }
+                                                })
+                                                .catch((error) => {
+                                                    console.log(error);
+                                                    result.innerHTML = "Something went wrong!";
+                                                })
+                                                .then(function () {
+                                                    form.reset();
+                                                    form.classList.remove("was-validated");
+                                                    setTimeout(() => {
+                                                        result.style.display = "none";
+                                                    }, 5000);
+                                                });
+                                        }
+                                        form.classList.add("was-validated");
+                                    },
+                                    false
+                                );
+                            });
+                        })();
+                    </script>
+        </div>
+
+
+    </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
