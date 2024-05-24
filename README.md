@@ -2,7 +2,7 @@
 This project is created using flask
 
 # run in terminal 
-pip install requirement.txt
+pip install requirements.txt
 
 # To run on web page
 flask run
